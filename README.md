@@ -1,2 +1,2 @@
-# Excersize1
+# Excercises
 popis cviceni...1. projekt
