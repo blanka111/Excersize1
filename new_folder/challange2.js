@@ -148,3 +148,59 @@ switch (language) {
     {console.log('Great language too :D');
         break;}
 }
+
+
+/*he Conditional (Ternary) Operator
+If your country's population is greater than 33 million, use the ternary operator to log a string like this to the console: "Portugal's population is above average". Otherwise, simply log "Portugal's population is below average". Notice how only one word change between these two sentences!
+After checking the result, change the population temporarily to 13 and then to 130. See the different results, and set the population back to original.
+*/
+
+function myFunction(population) {
+     let text = (population > 33) ? "Czech's population is above average":"Czech population is below average";
+    console.log(text);
+}
+let text=myFunction(population);
+
+/*
+HOMEWORK
+CHALLENGE #1
+Blanka, Katka and Tina are trying to compare their BMI (Body Mass Index), which is calculated using the formula: BMI = mass / (height * height)(mass in kg and height in meters).
+Your task is to write some code to help them:
+Store Blankas's, Tina’s and Katkas's mass and height in variables.
+Calculate both their BMIs using the formula, and store the results in three variables called BMIBlanka and BMIKatka and BMITina.
+Log the value of BMIBlanka, BMITina and BMIKatka to the console.
+BONUS: Create a boolean variable nameHasHigherBMI containing information about whether Blanka, Tina or Katka has a the highest BMI Log it to the console too
+
+ */
+const girls = ["Blanka", "Tina", "Katka"];
+let i = 0;
+
+for (;girls[i];) {
+    let textmass = prompt (`Vaha ${girls[i]} ( kg) :`);
+    let textheight = prompt (`Vyska ${girls[i]} ( m) :`);
+    let BMIx=BMI (textmass, textheight);
+    switch (i){
+        case 0: {let BMIBlanka= (textmass / (textheight * textheight));
+            break;
+        }
+        case 1: {let BMITina= (textmass / (textheight * textheight));
+            break;
+        }
+        case 2: {let BMIKatka= (textmass / (textheight * textheight));
+            break;
+        }
+    }
+    textmass += girls[i];
+    textheight += girls[i];
+    i++;
+}
+
+let NameHasHigherBMI = Math.max(BMIBlanka, BMITina, BMIKatka);
+console.log (`Nejvyssi BMI ma :  ${NameHasHigherBMI} `);
+
+function BMI(textmass, textheight)
+{
+let BMIx = (textmass / (textheight * textheight));
+console.log(`${girls[i]} BMI ${BMIx}`);
+}
+
