@@ -81,13 +81,13 @@ Reflect on why we should use the === operator and type conversion in this situat
 Nechapu, proc se to chova jinak pro moznost ==1 a ===1 ?? */
 
 
-let NumNeighbour = prompt (' How many neighbour countries does your contry have?: ');
-console.log(NumNeighbour);
+let numNeighbour = prompt (' How many neighbour countries does your contry have?: ');
+console.log(numNeighbour);
 
-if (NumNeighbour === 1){
+if (numNeighbour === 1){
     console.log(`Only 1 border!`);
 }
-else if (NumNeighbour > 1)
+else if (numNeighbour > 1)
 { console.log('More than 1 border.');
 }
 else {
@@ -104,17 +104,17 @@ If yours is the right country, log a strings like this 'You should live in Portu
 let language='Chinese';
 let isIsland = false;
 
-if (isIsland = false) {
-        if(language = 'English' && population < 50 )
+
+if ((isIsland == false) &&
+    (language == 'English') &&
+    (population < 50 ))
+
     {
-   console.log('You should live in Czech :)');
+        console.log('You should live in Czech :)');
     }
-        else { onsole.log('Czech doesnt meet you criteria');
+    else { console.log('Czech doesnt meet your criteria');
     }
-}
-else {
-    console.log('Czech doesnt meet you criteria');
-}
+
 
 /*Use a switch statement to log the following string for the given language:
 chinese or mandarin: 'MOST number of native speakers!';
@@ -127,26 +127,26 @@ for all other simply log 'Great language too :D'.
 
 switch (language) {
     case 'Spanish':
-    {console.log('2nd place in number of native speakers');
-        break;}
+                    {console.log('2nd place in number of native speakers');
+                    break;}
     case 'English':
-    {console.log('3rd place');
-        break;}
+                     {console.log('3rd place');
+                        break;}
     case 'Chinese':
-    {console.log('MOST number of native speakers!');
-        break;}
+                    {console.log('MOST number of native speakers!');
+                     break;}
     case 'Mandarin':
-    {console.log('MOST number of native speakers!');
-        break;}
+                    {console.log('MOST number of native speakers!');
+                    break;}
     case 'Hindi':
-    {console.log('Number 4');
-        break;}
+                    {console.log('Number 4');
+                    break;}
     case 'Arabic':
-    {console.log('5th most spoken language');
-        break;}
+                    {console.log('5th most spoken language');
+                    break;}
     default:
-    {console.log('Great language too :D');
-        break;}
+                    {console.log('Great language too :D');
+                    break;}
 }
 
 
@@ -172,6 +172,12 @@ Log the value of BMIBlanka, BMITina and BMIKatka to the console.
 BONUS: Create a boolean variable nameHasHigherBMI containing information about whether Blanka, Tina or Katka has a the highest BMI Log it to the console too
 
  */
+
+
+
+
+/*
+
 const girls = ["Blanka", "Tina", "Katka"];
 let i = 0;
 
@@ -194,13 +200,33 @@ for (;girls[i];) {
     textheight += girls[i];
     i++;
 }
+return BMIBlanka;
+return BMITina;
+return BMIKatka;
 
-let NameHasHigherBMI = Math.max(BMIBlanka, BMITina, BMIKatka);
-console.log (`Nejvyssi BMI ma :  ${NameHasHigherBMI} `);
+let nameHasHigherBMI = Math.max(BMIBlanka, BMITina, BMIKatka);
+console.log (`Nejvyssi BMI ma :  ${nameHasHigherBMI} `);
 
 function BMI(textmass, textheight)
 {
 let BMIx = (textmass / (textheight * textheight));
 console.log(`${girls[i]} BMI ${BMIx}`);
 }
+*/
 
+const girls = ["Blanka", "Tina", "Katka"];
+let i = 0;
+
+girls.forEach (element)
+=> {
+    let textmass = prompt (`Vaha ${girls[i]} ( kg) :`);
+    let textheight = prompt (`Vyska ${girls[i]} ( m) :`);
+}
+
+
+
+function BMI(textmass, textheight)
+    {
+        let BMIx = (textmass / (textheight * textheight));
+        console.log(`${girls[i]} BMI ${BMIx}`);
+    }
