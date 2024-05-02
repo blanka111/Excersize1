@@ -1,56 +1,4 @@
-let numbers = [10, 5, 17, 23, 8, 12];
 
-/* function suma(nums) {
-    let sum = 0;
-    nums.forEach((el) => {
-        sum = sum + el;
-    });
-    return sum;     //ukladam si hodnotu //
-} */
-let summary = sum(numbers);   //priradim si hosnot do cisel//
-
-
-function min(nums) {
-    let min = nums[0];
-    nums.forEach((el) => {
-        el < min ? min = el : {};
-    });
-
-    return min;
-}
-
-function max(nums) {
-    let max = nums[0];
-    nums.forEach((el) => {
-        el > max ? max = el : {};
-    });
-
-    return max;
-}
-
-function odd(nums) {
-    let oddSum = 0;
-    nums.forEach((el) => {
-        el % 2 ? oddSum++ : {}   //v pripade , ze mam se zbytkem TRUE - 1, FALSE -0  if el % 2 == 1 ..mam zbytek 1 ..je to liche cislo //
-    });
-    return oddSum;
-}
-
-function even(nums) {
-    let evenSum = 0;
-    nums.forEach((el) => {
-        //el % 2 ? oddSum++ : {}   //v pripade , ze mam se zbytkem TRUE - 1, FALSE -0  if el % 2 == 1 ..mam zbytek 1 ..je to liche cislo //
-        if (el % 2 === 0) {
-            evenSum++;        }
-    });
-    return evenSum;
-};
-
-function avg(sum, length) {
-    return sum / length;
-};
-
-console.log (`Soucet cisel je :  ${sum(numbers)}`);
 
 /* Objective: The objective of this assignment is to create a JavaScript program that analyzes a list of student grades and provides various statistics using conditions and loops.
 Task Description: You are given an array of student grades (each grade is a number between 0 and 100). Your task is to create a JavaScript program that performs the following tasks:
@@ -81,21 +29,75 @@ Number of Students with Grades:
 90-100: 2
 */
 
-let grades = [85, 72, 56, 90, 65, 78, 45, 88, 92, 70];
+/*let grades2 = [85, 72, 56, 90, 65, 78, 45, 88, 92, 70];*/
+const prompt=require ('prompt-sync')();
+let i=0
+let grades =[];
+
+/*for (i=0;i<3;i++){
+    let value=prompt (`Vlozte znamku :`);
+    grades.push(parseInt(value));
+
+}; */
+
+let end=true; //zacatek//
+while (end) {
+    let value = prompt(`Vlozte znamku, pokud chces skoncit vloz 999 :`);
+    if (value == 999)
+    {
+        end = false;
+    }
+    else
+    {
+        grades.push(parseInt(value));
+    }
+};
 
 function sum(nums) {
     let sum = 0;
     nums.forEach((el) => {
         sum = sum + el;
     });
+
     return sum;     //ukladam si hodnotu //
 };
 
-let gradeSummary=sum(grades);
-console.log(gradeSummary);
-console.log (`Prumer znamek  je :  ${avg(gradeSummary, grades.length)}`);
+function avg(sum, length) {
+    if (grades.length > 0){
+        return sum / length;
+    }
+    else{
+        return 0;
+    }
+};
 
-console.log (`Nejlepsi znamka  je :  ${max(grades)}`);
+let gradeSummary=sum(grades);
+if (grades.length > 0) {
+        let gradeSummary=sum(grades);
+        }
+
+
+function min(nums) {
+    let min = nums[0];
+    nums.forEach((el) => {
+        el < min ? min = el : {};
+    });
+    if (grades.length === 0) {
+        return 0;
+    }
+    return min;
+}
+
+function max(nums) {
+    let max = nums[0];
+    nums.forEach((el) => {
+        el > max ? max = el : {};
+    });
+    if (grades.length === 0) {
+        return 0;
+    }
+    return max;
+}
 
 function passingGrade(nums) {
     let numPassed = 0;
