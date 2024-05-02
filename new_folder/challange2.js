@@ -215,18 +215,22 @@ console.log(`${girls[i]} BMI ${BMIx}`);
 */
 
 const girls = ["Blanka", "Tina", "Katka"];
-let i = 0;
+let girlsBMI = [];
 
-girls.forEach (element)
-=> {
-    let textmass = prompt (`Vaha ${girls[i]} ( kg) :`);
-    let textheight = prompt (`Vyska ${girls[i]} ( m) :`);
-}
+girls.forEach ((el) => {
+    let textmass = prompt (`Vaha ${el} ( kg) :`);
+    let textheight = prompt (`Vyska ${el} ( m) :`);
+    let BMIx = (textmass / (textheight * textheight));
+    console.log(`${el} BMI ${BMIx}`);
+    girlsBMI.push(BMIx);
 
+})
 
+function checkBMI (arr)
+        {return Math.max.apply(null, arr);
+        }
 
-function BMI(textmass, textheight)
-    {
-        let BMIx = (textmass / (textheight * textheight));
-        console.log(`${girls[i]} BMI ${BMIx}`);
-    }
+let highestValue = checkBMI(girlsBMI);
+let i = girlsBMI.indexOf(highestValue);
+
+console.log (`Nejvyssi BMI ma :  ${girls[i]} `);
