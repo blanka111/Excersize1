@@ -1,5 +1,3 @@
-
-
 let numbers = [10, 5, 17, 23, 8, 12];
 
 function sum(nums) {
@@ -54,7 +52,7 @@ function avg(sum, length) {
 
 console.log (`Soucet cisel je :  ${sum(numbers)}`);
 
-    /* Objective: The objective of this assignment is to create a JavaScript program that analyzes a list of student grades and provides various statistics using conditions and loops.
+/* Objective: The objective of this assignment is to create a JavaScript program that analyzes a list of student grades and provides various statistics using conditions and loops.
 Task Description: You are given an array of student grades (each grade is a number between 0 and 100). Your task is to create a JavaScript program that performs the following tasks:
 Calculate the average grade of all the students.
 Determine the highest and lowest grades in the array.
