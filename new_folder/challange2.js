@@ -174,46 +174,6 @@ BONUS: Create a boolean variable nameHasHigherBMI containing information about w
  */
 
 
-
-
-/*
-
-const girls = ["Blanka", "Tina", "Katka"];
-let i = 0;
-
-for (;girls[i];) {
-    let textmass = prompt (`Vaha ${girls[i]} ( kg) :`);
-    let textheight = prompt (`Vyska ${girls[i]} ( m) :`);
-    let BMIx=BMI (textmass, textheight);
-    switch (i){
-        case 0: {let BMIBlanka= (textmass / (textheight * textheight));
-            break;
-        }
-        case 1: {let BMITina= (textmass / (textheight * textheight));
-            break;
-        }
-        case 2: {let BMIKatka= (textmass / (textheight * textheight));
-            break;
-        }
-    }
-    textmass += girls[i];
-    textheight += girls[i];
-    i++;
-}
-return BMIBlanka;
-return BMITina;
-return BMIKatka;
-
-let nameHasHigherBMI = Math.max(BMIBlanka, BMITina, BMIKatka);
-console.log (`Nejvyssi BMI ma :  ${nameHasHigherBMI} `);
-
-function BMI(textmass, textheight)
-{
-let BMIx = (textmass / (textheight * textheight));
-console.log(`${girls[i]} BMI ${BMIx}`);
-}
-*/
-
 const girls = ["Blanka", "Tina", "Katka"];
 let girlsBMI = [];
 
