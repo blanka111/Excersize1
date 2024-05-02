@@ -1,12 +1,12 @@
 let numbers = [10, 5, 17, 23, 8, 12];
 
-function sum(nums) {
+/* function suma(nums) {
     let sum = 0;
     nums.forEach((el) => {
         sum = sum + el;
     });
     return sum;     //ukladam si hodnotu //
-}
+} */
 let summary = sum(numbers);   //priradim si hosnot do cisel//
 
 
@@ -83,6 +83,84 @@ Number of Students with Grades:
 
 let grades = [85, 72, 56, 90, 65, 78, 45, 88, 92, 70];
 
+function sum(nums) {
+    let sum = 0;
+    nums.forEach((el) => {
+        sum = sum + el;
+    });
+    return sum;     //ukladam si hodnotu //
+};
+
 let gradeSummary=sum(grades);
 console.log(gradeSummary);
 console.log (`Prumer znamek  je :  ${avg(gradeSummary, grades.length)}`);
+
+console.log (`Nejlepsi znamka  je :  ${max(grades)}`);
+
+function passingGrade(nums) {
+    let numPassed = 0;
+    nums.forEach((el) => {
+        el >= 60 ? numPassed++ : {}
+    });
+    return numPassed;
+};
+
+function failingGrade(nums) {
+    let numFailed = 0;
+    nums.forEach((el) => {
+        el < 60 ? numFailed++ : {}
+    });
+    return numFailed;
+};
+
+
+function grade1(nums) {
+    let grade1 = 0;
+    nums.forEach((el) => {
+        el <= 59 ? grade1++ : {}
+    });
+    return grade1;
+};
+
+function grade2(nums) {
+    let grade2 = 0;
+    nums.forEach((el) => {
+        ((el > 59) && (el <=69)) ? grade2++ : {}
+    });
+    return grade2;
+};
+
+function grade3(nums) {
+    let grade3 = 0;
+    nums.forEach((el) => {
+        ((el > 69) && (el <=79)) ? grade3++ : {}
+    });
+    return grade3;
+};
+function grade4(nums) {
+    let grade4 = 0;
+    nums.forEach((el) => {
+        ((el > 79) && (el <=89)) ? grade4++ : {}
+    });
+    return grade4;
+};
+
+function grade5(nums) {
+    let grade5 = 0;
+    nums.forEach((el) => {
+        el > 89 ? grade5++ : {}
+    });
+    return grade5;
+};
+
+
+console.log (`Prumer znamek  je :  ${avg(gradeSummary, grades.length)}`);
+console.log (`Nejlepsi znamka  je :  ${max(grades)}`);
+console.log (`Nejhorsi znamka  je :  ${min(grades)}`);
+console.log (`Pocet postupujicich je :  ${passingGrade(grades)}`);
+console.log (`Pocet nepostupujicich je :  ${failingGrade(grades)}`);
+console.log (`Pocet znamek v rozmezi 0-59 :  ${grade1(grades)}`);
+console.log (`Pocet znamek v rozmezi 60-69 :  ${grade2(grades)}`);
+console.log (`Pocet znamek v rozmezi 70-79 :  ${grade3(grades)}`);
+console.log (`Pocet znamek v rozmezi 80-89 :  ${grade4(grades)}`);
+console.log (`Pocet znamek v rozmezi 90-100 :  ${grade5(grades)}`);
