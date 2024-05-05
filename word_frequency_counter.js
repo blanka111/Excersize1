@@ -1,13 +1,15 @@
 const fs =require ('fs');
 
-fs.readFile('file.txt', 'utf8', (err, data) => {   //vraci error nebo data//
-if (err) {
-    console.error(err);
-    return;
+fs.readFile('text.txt', 'utf8', (err, data) => {   //vraci error nebo data//
+    if (err) {
+        console.error(err);
+        return;
+    }
+else {
+    console.log(data);// nactu data//
 }
-
-console.log(data);  // nactu data//
-    let words = data.replace('.',' ').;  //nahrazeni pouze u prvniho nalezeneho znaku //
+});
+    /*let words = data.replace('.',' ').;  //nahrazeni pouze u prvniho nalezeneho znaku //
 
     let words=data.split(' ');  // oddeleni slov na zaklade toho, co je v zavorkach - mezera //
 
