@@ -34,23 +34,10 @@ const prompt=require ('prompt-sync')();
 let i=0
 let grades =[];
 
-/*for (i=0;i<3;i++){
-    let value=prompt (`Vlozte znamku :`);
-    grades.push(parseInt(value));
-
-}; */
-
 let end=true; //zacatek//
 while (end) {
     let value = prompt(`Vlozte znamku, pokud chces skoncit vloz 999 :`);
-    if (value == 999)
-    {
-        end = false;
-    }
-    else
-    {
-        grades.push(parseInt(value));
-    }
+    value ==999 ? end=false : grades.push(value);
 };
 
 function sum(nums) {
@@ -58,7 +45,6 @@ function sum(nums) {
     nums.forEach((el) => {
         sum = sum + el;
     });
-
     return sum;     //ukladam si hodnotu //
 };
 
@@ -72,10 +58,6 @@ function avg(sum, length) {
 };
 
 let gradeSummary=sum(grades);
-if (grades.length > 0) {
-        let gradeSummary=sum(grades);
-        }
-
 
 function min(nums) {
     let min = nums[0];
@@ -116,43 +98,12 @@ function failingGrade(nums) {
 };
 
 
-function grade1(nums) {
-    let grade1 = 0;
+function grade(nums, leftInterval, rightInterval) {
+    let gradeX = 0;
     nums.forEach((el) => {
-        el <= 59 ? grade1++ : {}
+        ((el > leftInterval) && (el <=rightInterval)) ? gradeX++ : {}
     });
-    return grade1;
-};
-
-function grade2(nums) {
-    let grade2 = 0;
-    nums.forEach((el) => {
-        ((el > 59) && (el <=69)) ? grade2++ : {}
-    });
-    return grade2;
-};
-
-function grade3(nums) {
-    let grade3 = 0;
-    nums.forEach((el) => {
-        ((el > 69) && (el <=79)) ? grade3++ : {}
-    });
-    return grade3;
-};
-function grade4(nums) {
-    let grade4 = 0;
-    nums.forEach((el) => {
-        ((el > 79) && (el <=89)) ? grade4++ : {}
-    });
-    return grade4;
-};
-
-function grade5(nums) {
-    let grade5 = 0;
-    nums.forEach((el) => {
-        el > 89 ? grade5++ : {}
-    });
-    return grade5;
+    return gradeX;
 };
 
 
@@ -161,8 +112,8 @@ console.log (`Nejlepsi znamka  je :  ${max(grades)}`);
 console.log (`Nejhorsi znamka  je :  ${min(grades)}`);
 console.log (`Pocet postupujicich je :  ${passingGrade(grades)}`);
 console.log (`Pocet nepostupujicich je :  ${failingGrade(grades)}`);
-console.log (`Pocet znamek v rozmezi 0-59 :  ${grade1(grades)}`);
-console.log (`Pocet znamek v rozmezi 60-69 :  ${grade2(grades)}`);
-console.log (`Pocet znamek v rozmezi 70-79 :  ${grade3(grades)}`);
-console.log (`Pocet znamek v rozmezi 80-89 :  ${grade4(grades)}`);
-console.log (`Pocet znamek v rozmezi 90-100 :  ${grade5(grades)}`);
+console.log (`Pocet znamek v rozmezi 0-59 :  ${grade(grades,0,59)}`);
+console.log (`Pocet znamek v rozmezi 60-69 :  ${grade(grades,60,69)}`);
+console.log (`Pocet znamek v rozmezi 70-79 :  ${grade(grades,70,79)}`);
+console.log (`Pocet znamek v rozmezi 80-89 :  ${grade(grades,80,89)}`);
+console.log (`Pocet znamek v rozmezi 90-100 :  ${grade(grades,90,100)}`);
