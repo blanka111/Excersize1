@@ -16,9 +16,40 @@ Medium: 8 or more characters but doesn't contain both uppercase and lowercase le
 Strong: 8 or more characters and contains both uppercase and lowercase letters.
 */
 
-
 const prompt = require('prompt-sync')();
 
 let vstup = prompt ('vloz cislo : ');
+//1//
+vstup % 2 ===0 ? console.log ('Sude cislo') : console.log ('Liche cislo');
+//2//
+let temperature = prompt ('Vloz teplotu : ');
+if (temperature<0){
+    console.log('Freezing');
+}
+else if ((temperature >= 0) && (temperature < 15))  {
+    console.log('Cold');
+}
+else if ((temperature >= 15) && (temperature < 25)){
+    console.log('Moderate');
+}
+else if (temperature >= 25)
+{
+    console.log('Hot');
+};
+//3//
+let email = prompt ('Email:');
+if ((email.includes('@')) && (email.includes('.'))){
+    console.log('Email valid');
+};
+else {
+    console.log('Email not valid');
+}
 
-vstup == prompt ('vloz cislo : ');
+//Medium: Leap Year Checker: Create a function that takes a year as input and returns true if it's a leap year and false if it's not. A leap year is divisible by 4 but not by 100 unless it is also divisible by 400.
+// Medium: Find the Greatest Number: Write a JavaScript function that takes three numbers as input and returns the greatest number among them.
+// Hard: Palindrome Checker: Create a function that takes a string as input and returns true if the string is a palindrome (reads the same forwards and backwards), ignoring spaces, punctuation, and capitalization.
+
+let year = prompt ('Vloz rok : ');
+if (((year % 4 ===0) && (year % 100 !== 0)) || ((year % 4 ===0) && (year % 400 === 0))) {
+    console.log('Prestupny rok');
+} ;
