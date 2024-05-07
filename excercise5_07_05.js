@@ -16,4 +16,9 @@ Medium: 8 or more characters but doesn't contain both uppercase and lowercase le
 Strong: 8 or more characters and contains both uppercase and lowercase letters.
 */
 
-let number=0;
+
+const prompt = require('prompt-sync')();
+
+let vstup = prompt ('vloz cislo : ');
+
+vstup == prompt ('vloz cislo : ');
