@@ -17,7 +17,7 @@ Strong: 8 or more characters and contains both uppercase and lowercase letters.
 */
 
 const prompt = require('prompt-sync')();
-
+/*
 let vstup = prompt ('vloz cislo : ');
 //1//
 vstup % 2 ===0 ? console.log ('Sude cislo') : console.log ('Liche cislo');
@@ -38,12 +38,12 @@ else if (temperature >= 25)
 };
 //3//
 let email = prompt ('Email:');
-if ((email.includes('@')) && (email.includes('.'))){
+if ((email.includes('@')) && (email.includes('/./'))){
     console.log('Email valid');
-};
+}
 else {
     console.log('Email not valid');
-}
+};
 
 //Medium: Leap Year Checker: Create a function that takes a year as input and returns true if it's a leap year and false if it's not. A leap year is divisible by 4 but not by 100 unless it is also divisible by 400.
 // Medium: Find the Greatest Number: Write a JavaScript function that takes three numbers as input and returns the greatest number among them.
@@ -52,4 +52,78 @@ else {
 let year = prompt ('Vloz rok : ');
 if (((year % 4 ===0) && (year % 100 !== 0)) || ((year % 4 ===0) && (year % 400 === 0))) {
     console.log('Prestupny rok');
-} ;
+}
+else {
+    console.log('Neprestupny rok');
+}
+numbers=[];
+
+for(i=0;i<=2;i++)
+    {
+    let number = prompt ('Vloz cislo : ');
+    numbers.push(Number(number));
+    };
+
+
+function max(num){
+    let max = numbers[0];
+    numbers.forEach((el) => {
+        if(el > max) {
+            max = el;
+        }
+    });
+    return max;
+}
+
+console.log(`Max hodnota je cislo: ${max(numbers)}`);
+
+
+function palidrom(text){
+    let isPalindrom = true;
+    for(let i=0;i<text.length;i++){
+        if(text[i]=== text [text.length -1-i]){
+            console.log(text[i]);
+        }
+    else{
+        isPalindrom= false
+        return false;
+    }
+}
+    return isPalindrom;
+}
+console.log(palidrom('ahhhha')); */
+
+/*Hard: Prime Number Checker: Write a JavaScript function that takes an integer as input and returns true if it's a prime number and false if it's not.
+*/
+
+let prvocislo = prompt ('Vloz cislo pro prvocislo: ');
+prvocislo = parseInt(prvocislo);
+console.log(prvocislo);
+
+
+let nasobek = 0;
+
+for (let i = 0; i < prvocislo; i++) {
+    let postupne = (prvocislo-i);
+    console.log(postupne);
+    let vysledek = prvocislo % postupne;
+    console.log(vysledek);
+
+    if (vysledek  == 0) {
+        nasobek ++;
+    }
+}
+console.log(nasobek);
+
+let isPrvocislo = false;
+if (nasobek===prvocislo) {
+    isPrvocislo = true;
+}
+console.log(nasobek);
+console.log(isPrvocislo);
+
+
+
+
+
+
