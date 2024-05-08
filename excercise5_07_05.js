@@ -98,28 +98,29 @@ console.log(palidrom('ahhhha')); */
 
 let prvocislo = prompt ('Vloz cislo pro prvocislo: ');
 prvocislo = parseInt(prvocislo);
-console.log(prvocislo);
 
 
 let nasobek = 0;
 
 for (let i = 0; i < prvocislo; i++) {
     let postupne = (prvocislo-i);
-    console.log(postupne);
     let vysledek = prvocislo % postupne;
-    console.log(vysledek);
+    let vysledek0 = prvocislo / postupne;
 
-    if (vysledek  == 0) {
+    if (vysledek  == 0)
+    {
         nasobek ++;
     }
 }
-console.log(nasobek);
 
 let isPrvocislo = false;
-if (nasobek===prvocislo) {
+if (nasobek == 2)
+{
     isPrvocislo = true;
 }
-console.log(nasobek);
+else {
+    isPrvocislo = false;
+}
 console.log(isPrvocislo);
 
 
