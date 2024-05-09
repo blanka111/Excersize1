@@ -125,13 +125,8 @@ for (let i = 0; i < prvocislo; i++) {
 }
 
 let isPrvocislo = false;
-if (nasobek == 2)
-{
-    isPrvocislo = true;
-}
-else {
-    isPrvocislo = false;
-}
+nasobek ==2 ? isPrvocislo = true : isPrvocislo = false;
+
 console.log(isPrvocislo);
 
 //8//
