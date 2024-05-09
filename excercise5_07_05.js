@@ -122,7 +122,7 @@ for (let i = 0; i < prvocislo; i++) {
 }
 
 let isPrvocislo = false;
-nasobek ==2 ? isPrvocislo = true : isPrvocislo = false;
+nasobek == 2 ? isPrvocislo = true : isPrvocislo = false;
 
 console.log(isPrvocislo);
 
