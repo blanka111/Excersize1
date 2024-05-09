@@ -17,7 +17,7 @@ Strong: 8 or more characters and contains both uppercase and lowercase letters.
 */
 
 const prompt = require('prompt-sync')();
-/*
+
 let vstup = prompt ('vloz cislo : ');
 //1//
 vstup % 2 ===0 ? console.log ('Sude cislo') : console.log ('Liche cislo');
@@ -36,18 +36,23 @@ else if (temperature >= 25)
 {
     console.log('Hot');
 };
+
 //3//
+//Medium: Validate Email Format: Write a function that takes an email address as input and returns true if the email address is valid based on a simple format check (e.g., it contains an "@" symbol and a domain).//
 let email = prompt ('Email:');
-if ((email.includes('@')) && (email.includes('/./'))){
+if ((email.includes('@')) &&
+        ((email.includes('gamil.com')) || (email.includes('seznam.cz')) || (email.includes('seznam.sk')))
+    )
+{
     console.log('Email valid');
 }
 else {
     console.log('Email not valid');
 };
 
-//Medium: Leap Year Checker: Create a function that takes a year as input and returns true if it's a leap year and false if it's not. A leap year is divisible by 4 but not by 100 unless it is also divisible by 400.
-// Medium: Find the Greatest Number: Write a JavaScript function that takes three numbers as input and returns the greatest number among them.
-// Hard: Palindrome Checker: Create a function that takes a string as input and returns true if the string is a palindrome (reads the same forwards and backwards), ignoring spaces, punctuation, and capitalization.
+//4//
+// Medium: Leap Year Checker: Create a function that takes a year as input and returns true if it's a leap year and false if it's not. A leap year is divisible by 4 but not by 100 unless it is also divisible by 400.
+
 
 let year = prompt ('Vloz rok : ');
 if (((year % 4 ===0) && (year % 100 !== 0)) || ((year % 4 ===0) && (year % 400 === 0))) {
@@ -64,6 +69,9 @@ for(i=0;i<=2;i++)
     numbers.push(Number(number));
     };
 
+//5//
+//// Medium: Find the Greatest Number: Write a JavaScript function that takes three numbers as input and returns the greatest number among them. //
+
 
 function max(num){
     let max = numbers[0];
@@ -77,6 +85,8 @@ function max(num){
 
 console.log(`Max hodnota je cislo: ${max(numbers)}`);
 
+//6//
+// // Hard: Palindrome Checker: Create a function that takes a string as input and returns true if the string is a palindrome (reads the same forwards and backwards), ignoring spaces, punctuation, and capitalization. //
 
 function palidrom(text){
     let isPalindrom = true;
@@ -91,12 +101,13 @@ function palidrom(text){
 }
     return isPalindrom;
 }
-console.log(palidrom('ahhhha')); */
+console.log(palidrom('ahhhha'));
 
+//7//
 /*Hard: Prime Number Checker: Write a JavaScript function that takes an integer as input and returns true if it's a prime number and false if it's not.
 */
 
-let prvocislo = prompt ('Vloz cislo pro prvocislo: ');
+let prvocislo = prompt('Vloz cislo pro prvocislo: ');
 prvocislo = parseInt(prvocislo);
 
 
@@ -122,6 +133,9 @@ else {
     isPrvocislo = false;
 }
 console.log(isPrvocislo);
+
+//8//
+// Hard: Anagram Checker: Implement a function that takes two strings as input and returns true if they are anagrams of each other (contain the same characters in any order) and false otherwise.//
 
 
 
