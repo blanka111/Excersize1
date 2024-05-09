@@ -10,10 +10,7 @@ Medium: Find the Greatest Number: Write a JavaScript function that takes three n
 Hard: Palindrome Checker: Create a function that takes a string as input and returns true if the string is a palindrome (reads the same forwards and backwards), ignoring spaces, punctuation, and capitalization.
 Hard: Prime Number Checker: Write a JavaScript function that takes an integer as input and returns true if it's a prime number and false if it's not.
 Hard: Anagram Checker: Implement a function that takes two strings as input and returns true if they are anagrams of each other (contain the same characters in any order) and false otherwise.
-Advanced: Password Strength Checker: Create a function that takes a password as input and returns a strength rating based on the following criteria:
-Weak: Less than 8 characters.
-Medium: 8 or more characters but doesn't contain both uppercase and lowercase letters.
-Strong: 8 or more characters and contains both uppercase and lowercase letters.
+
 */
 
 const prompt = require('prompt-sync')();
@@ -132,7 +129,11 @@ console.log(isPrvocislo);
 //8//
 // Hard: Anagram Checker: Implement a function that takes two strings as input and returns true if they are anagrams of each other (contain the same characters in any order) and false otherwise.//
 
-
+//9//
+//Advanced: Password Strength Checker: Create a function that takes a password as input and returns a strength rating based on the following criteria:
+// Weak: Less than 8 characters.
+// Medium: 8 or more characters but doesn't contain both uppercase and lowercase letters.
+// Strong: 8 or more characters and contains both uppercase and lowercase letters. //
 
 
 
