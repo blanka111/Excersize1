@@ -1,4 +1,4 @@
-let pole =[1,2,3,4,5,6,7,8,9,10];
+let pole =[1,2,3,4,5,6,7,8,'cat',10];
 
 //Výpis čísel od 1 do 10: Použite cyklus na výpis čísel od 1 do 10.
 // Výpis párnych čísel od 1 do 20: Použite cyklus na výpis len párnych čísel od 1 do 20.
@@ -80,5 +80,28 @@ polerada.forEach((el) => {
     polerazeni.push(polerada[i]);
     }
 } */
+
+//9//
+// Vyhľadanie prvku v poli: Nájdite zadaný prvok v danom poli čísel.//
+
+const prompt = require('prompt-sync')();
+let najit = prompt ('Vloz hodnotu, kterou chces najit :');
+let elVpoli=false;
+
+pole.forEach((el) => {
+    el == najit ? elVpoli=true : {};
+});
+console.log(elVpoli);
+
+//10//
+// Výpočet mocniny čísla: Napíšte funkciu, ktorá vypočíta zadanú mocninu zadaného čísla.//
+let mocnina = prompt ('Zadej cislo, ze ktereho chces vypocitat mocininu :  ');
+function mocn (nums) {
+    mocnim = nums * nums;
+    return mocnim;
+};
+console.log(`Mocina cisla je : ${(mocn(mocnina))} `);
+
+
 
 
