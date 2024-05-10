@@ -1,0 +1,29 @@
+Index: word_frequency_counter.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>const fs =require ('fs');\r\n\r\nfs.readFile('text.txt', 'utf8', (err, data) => {   //vraci error nebo data//\r\n    if (err) {\r\n        console.error(err);\r\n        return;\r\n    }\r\nelse {\r\n    console.log(data);// nactu data//\r\n}\r\n});\r\n    /*let words = data.replace('.',' ').;  //nahrazeni pouze u prvniho nalezeneho znaku //\r\n\r\n    let words=data.split(' ');  // oddeleni slov na zaklade toho, co je v zavorkach - mezera //\r\n\r\n    let wordsUnique =[];\r\n\r\n    words.forEach((el) => {\r\n            if(wordsUnique.includes(word.toLowerCase()))   // v danem poli je obsazeno toto slovo //\r\n            {\r\n            }\r\n            else {\r\n                wordsUnique.push(word.toLowerCase());\r\n            }\r\n\r\n    });\r\n})\r\n\r\n/*\r\n1. Nacist data ze souboru\r\n2.Rozdelit vetu na slova.\r\n3. Zjistit vyskyt slova ve vete.\r\n */
+===================================================================
+diff --git a/word_frequency_counter.js b/word_frequency_counter.js
+--- a/word_frequency_counter.js	
++++ b/word_frequency_counter.js	
+@@ -9,6 +9,20 @@
+     console.log(data);// nactu data//
+ }
+ });
++
++const prompt = require('prompt-sync')();
++let nums = prompt('napis cislo :');
++
++
++switch (nums) {
++    case '1':console.log('jednicka');
++    break;
++    case '2': console.log('dvojka');
++    break;
++    default: console.log(data);
++}
++
++
+     /*let words = data.replace('.',' ').;  //nahrazeni pouze u prvniho nalezeneho znaku //
+ 
+     let words=data.split(' ');  // oddeleni slov na zaklade toho, co je v zavorkach - mezera //
