@@ -59,7 +59,7 @@ if ((email.includes('@')) &&
 }
 else {
     console.log('Email not valid');
-};
+}
 
 //4//
 // Medium: Leap Year Checker: Create a function that takes a year as input and returns true if it's a leap year and false if it's not. A leap year is divisible by 4 but not by 100 unless it is also divisible by 400.
@@ -123,7 +123,7 @@ prvocislo = parseInt(prvocislo);
 let nasobek = 0;
 for (let i=prvocislo; i>0;i--){
     (prvocislo % i) == 0 ? nasobek++ : {};
-};
+}
 
 let isPrvocislo = false;
 nasobek <= 2 ? isPrvocislo = true : isPrvocislo = false;
