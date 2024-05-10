@@ -19,20 +19,34 @@ let vstup = prompt ('vloz cislo : ');
 //1//
 vstup % 2 ===0 ? console.log ('Sude cislo') : console.log ('Liche cislo');
 //2//
-let temperature = prompt ('Vloz teplotu : ');
-if (temperature<0){
-    console.log('Freezing');
+let temperature = prompt('Vloz teplotu : ');
+let tem = 'string';
+function tempRange(temperature,tem) {
+    switch(true) {
+        case
+        (temperature < 0)
+        :
+            tem = "Freezing";
+            break;
+        case
+        ((temperature >= 0) && (temperature < 15))
+        :
+            tem = "Cold";
+            break;
+        case
+        ((temperature >= 15) && (temperature < 25))
+        :
+            tem = "Moderate";
+            break;
+        default
+        :
+            tem = "Hot";
+            break;
+    };
+console.log(tem);
 }
-else if ((temperature >= 0) && (temperature < 15))  {
-    console.log('Cold');
-}
-else if ((temperature >= 15) && (temperature < 25)){
-    console.log('Moderate');
-}
-else if (temperature >= 25)
-{
-    console.log('Hot');
-};
+const interval = tempRange(temperature,tem);
+
 
 //3//
 //Medium: Validate Email Format: Write a function that takes an email address as input and returns true if the email address is valid based on a simple format check (e.g., it contains an "@" symbol and a domain).//
@@ -60,9 +74,8 @@ else {
 }
 numbers=[];
 
-for(i=0;i<=2;i++)
-    {
-    let number = prompt ('Vloz cislo : ');
+for(i=0; i<=2 ; i++){
+    let number = prompt('Vloz cislo : ');
     numbers.push(Number(number));
     };
 
@@ -87,12 +100,12 @@ console.log(`Max hodnota je cislo: ${max(numbers)}`);
 
 function palidrom(text){
     let isPalindrom = true;
-    for(let i=0;i<text.length;i++){
-        if(text[i]=== text [text.length -1-i]){
+    for(let i= 0; i<text.length; i++){
+        if(text[i] === text [text.length-1-i]){
             console.log(text[i]);
         }
     else{
-        isPalindrom= false
+        isPalindrom = false
         return false;
     }
 }
@@ -104,26 +117,16 @@ console.log(palidrom('ahhhha'));
 /*Hard: Prime Number Checker: Write a JavaScript function that takes an integer as input and returns true if it's a prime number and false if it's not.
 */
 
-let prvocislo = prompt('Vloz cislo pro prvocislo: ');
+let prvocislo = prompt('Vloz cislo pro vyhodnoceni, zda je prvocislo: ');
 prvocislo = parseInt(prvocislo);
 
-
 let nasobek = 0;
-
-for (let i = 0; i < prvocislo; i++) {
-    let postupne = (prvocislo-i);
-    let vysledek = prvocislo % postupne;
-    let vysledek0 = prvocislo / postupne;
-
-    if (vysledek  == 0)
-    {
-        nasobek ++;
-    }
-}
+for (let i=prvocislo; i>0;i--){
+    (prvocislo % i) == 0 ? nasobek++ : {};
+};
 
 let isPrvocislo = false;
-nasobek == 2 ? isPrvocislo = true : isPrvocislo = false;
-
+nasobek <= 2 ? isPrvocislo = true : isPrvocislo = false;
 console.log(isPrvocislo);
 
 //8//
