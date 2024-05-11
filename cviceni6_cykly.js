@@ -19,6 +19,9 @@ pole.forEach((el) => {
     console.log(el);
 }); */
 
+const prompt = require('prompt-sync')();
+
+
 for (let i= 1; i<11; i++) {
     console.log(i);
 };
@@ -58,8 +61,8 @@ console.log(sumsude);
 let faktorial = 6;
 let sumfaktorial = 1;
 
-for (let i= faktorial;  i > 0 ; i--) {
-    sumfaktorial = (sumfaktorial * i);
+for (let f = faktorial;  f > 0 ; f--) {
+    sumfaktorial = (sumfaktorial * f);
 };
 
 console.log(sumfaktorial);
@@ -67,19 +70,27 @@ console.log(sumfaktorial);
 //7//
 //Zoradenie pola: Zoraďte dané pole čísel od najmenšieho po najväčšie.//
 
-let polerada = [1,2,3,4,5,6,7,8,9,10];
-let nejemnsi = 0
+let polerada = [101,2,3,4,5,6,7,8,9,100];
+let nejemnsi =polerada [0];
 let polerazeni =[];
 
-polerada.forEach((el) => {
-    ;
-})
+while (polerada.length > 0) {
+    polerada.forEach((el) => {
+        if (el < nejemnsi) {
+            nejemnsi = el;
+        }
+    })
+    polerazeni.push(nejemnsi);
+    let j = polerada.findIndex(index);
+    polerada.splice(j, 1);
+    nejemnsi = polerada [0];
+}
 
-/* for (let i= 0; i < polerada.length; i++) {
-    if (polerada[i] < nejemnsi ) {
-    polerazeni.push(polerada[i]);
-    }
-} */
+ function index(el) {
+     return el === nejemnsi;
+ }
+console.log(polerazeni);
+
 
 //9//
 // Vyhľadanie prvku v poli: Nájdite zadaný prvok v danom poli čísel.//
@@ -101,6 +112,25 @@ function mocn (nums) {
     return mocnim;
 };
 console.log(`Mocina cisla je : ${(mocn(mocnina))} `);
+
+//BONUS//
+//BONUS: Triangulárna hviezdičková pyramída spolu s obrátenou pyramídou: Vytvorte funkciu, ktorá vygeneruje triangulárnu pyramídu spolu aj s obrátenou triangulárovou pzramídou z hviezdičiek so zadaným počtom riadkov.//
+
+let hvezda = "*";
+let hvezdaJedna = "*";
+let pocet = prompt ('Vloz cislo zakladu pro pyramidu : ')
+
+for (i = 0; i < pocet; i++) {
+    console.log(hvezda);
+    if (i === pocet-1) {
+        for (let j = pocet - 1 ; j > 0; j--) {
+            let hvezda2 = hvezda.slice(0,j);
+            console.log(hvezda2);
+        }
+    }
+    hvezda = hvezda + hvezdaJedna;
+    }
+
 
 
 
