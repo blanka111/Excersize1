@@ -114,6 +114,7 @@ function mocn (nums) {
 console.log(`Mocina cisla je : ${(mocn(mocnina))} `);
 
 //BONUS//
+
 //BONUS: Triangulárna hviezdičková pyramída spolu s obrátenou pyramídou: Vytvorte funkciu, ktorá vygeneruje triangulárnu pyramídu spolu aj s obrátenou triangulárovou pzramídou z hviezdičiek so zadaným počtom riadkov.//
 
 let hvezda = "*";
