@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d582c7b-f264-45a8-b1e6-6032876ea5a7" name="Changes" comment="opakovani conditions cviceni 1-7">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_05_2024_17_37__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_05_2024_17_37__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_05_2024_18_24__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_05_2024_18_24__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_04_2024_17_10__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_04_2024_17_10__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="6d582c7b-f264-45a8-b1e6-6032876ea5a7" name="Changes" comment="2D pole a objekt">
       <change beforePath="$PROJECT_DIR$/cviceni6_cykly.js" beforeDir="false" afterPath="$PROJECT_DIR$/cviceni6_cykly.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -381,6 +376,7 @@
     <MESSAGE value="cviceni5" />
     <MESSAGE value="opakovani conditions / cviceni 1-7" />
     <MESSAGE value="opakovani conditions cviceni 1-7" />
-    <option name="LAST_COMMIT_MESSAGE" value="opakovani conditions cviceni 1-7" />
+    <MESSAGE value="2D pole a objekt" />
+    <option name="LAST_COMMIT_MESSAGE" value="2D pole a objekt" />
   </component>
 </project>

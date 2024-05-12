@@ -90,12 +90,17 @@ while (polerada.length > 0) {
      return el === nejemnsi;
  }
 console.log(polerazeni);
-
+//8//
+//// Generovanie prvých n čísel Fibonacciovej postupnosti: Napíšte funkciu, ktorá vygeneruje prvých n čísel Fibonacciovej postupnosti.//
+let fib = [0,1];
+for (let i = 2; i < 10; i++) {
+    fib[i] = fib[i-2] + fib[i-1];
+    console.log(fib[i]);
+}
 
 //9//
 // Vyhľadanie prvku v poli: Nájdite zadaný prvok v danom poli čísel.//
 
-const prompt = require('prompt-sync')();
 let najit = prompt ('Vloz hodnotu, kterou chces najit :');
 let elVpoli=false;
 
