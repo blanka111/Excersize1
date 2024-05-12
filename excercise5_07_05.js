@@ -117,7 +117,7 @@ console.log(palidrom('ahhhha'));
 /*Hard: Prime Number Checker: Write a JavaScript function that takes an integer as input and returns true if it's a prime number and false if it's not.
 */
 
-let prvocislo = prompt('Vloz cislo pro vyhodnoceni, zda je prvocislo: ');
+ let prvocislo = prompt('Vloz cislo pro vyhodnoceni, zda je prvocislo: ');
 prvocislo = parseInt(prvocislo);
 
 let nasobek = 0;
@@ -131,13 +131,43 @@ console.log(isPrvocislo);
 
 //8//
 // Hard: Anagram Checker: Implement a function that takes two strings as input and returns true if they are anagrams of each other (contain the same characters in any order) and false otherwise.//
+let text1 = prompt('Vloz prvni slovo ANAGRAM : ');
+let text2 = prompt('Vloz druhe slovo ANAGRAM : ');
+isAnagram = true;
+text1 = text1.toLowerCase();
+text2 = text2.toLowerCase();
+const pole1 = text1.split('');
+const pole2 = text2.split('');
+
+pole1.sort();
+pole2.sort();
+for (let i=0; i< pole1.length;i++){
+    ((pole1[i]) == (pole2[i])) ? {} : isAnagram = false;
+}
+
+isAnagram === true ? console.log('Jedna se o ANAGRAM.') : console.log('Neni ANAGRAM!');
 
 //9//
+
 //Advanced: Password Strength Checker: Create a function that takes a password as input and returns a strength rating based on the following criteria:
 // Weak: Less than 8 characters.
 // Medium: 8 or more characters but doesn't contain both uppercase and lowercase letters.
 // Strong: 8 or more characters and contains both uppercase and lowercase letters. //
 
-
-
-
+function passwordChecker (passw) {
+let passwordLower = passw.toLowerCase();
+if (passw.length >= 8) {
+    if (passw == passwordLower) {
+        console.log('MEDIUM');
+    }
+    else
+    {
+        console.log('STRONG');
+    }
+}
+else {
+    console.log('WEAK');
+}
+}
+let password = prompt('Vloz Password: ');
+passwordChecker(password);
