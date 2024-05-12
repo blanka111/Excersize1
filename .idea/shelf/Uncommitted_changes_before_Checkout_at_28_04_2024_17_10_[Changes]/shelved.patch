@@ -1,0 +1,42 @@
+Index: new_folder/challange.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/*\r\nvalues and variables\r\n\r\nDeclare variables called country, continent and population and assign their values according to your own country (population in millions).\r\n\r\nLog their values into console\r\n\r\n*/\r\nconst country = 'Czech republic';\r\nconst continent = 'Europe';\r\nlet population = 10;\r\n\r\nconsole.log(country);\r\nconsole.log(continent);\r\nconsole.log(population);\r\n\r\n/*\r\nData types\r\n\r\nDeclare a variable called isIsland and set its value according to your country. The variable should hold a Boolean value. Also declare a variable language, but don't assign it any value yet.\r\n\r\nLog the types of isIsland, population, country and language to console\r\n\r\n\r\n */\r\n\r\nconst isIsland = false;\r\n\r\nconsole.log(isIsland);\r\nconsole.log(population);\r\nconsole.log(country);\r\n\r\n\r\n/*\r\nLet, const, var\r\n\r\nSet the value of language to the language spoken where you live (some countries have multiple languages, but just choose one).\r\n\r\nThink about which variables should be const variables (which values will never change, and which might change?). Then, change these variables to const.\r\n\r\nTry to change one of the changed variables now, and observe what happens.\r\n\r\n */\r\n\r\nlet language='czech language';\r\nconsole.log(language);\r\n\r\n/*\r\nBasic operators\r\n\r\nIf your country split in half, and each half would contain half the population, then how many people would live in each half?\r\n\r\nIncrease the population of your country by 1 and log the result to the console.\r\n\r\nFinland has a population of 6 million. Does your country have more people than Finland?\r\n\r\nThe average population of a country is 33 million people. Does you country have less people than the average country?\r\n\r\nBased on the variables you created, create a new variable description which contains a string with this format: 'Portugal is in Europe, and its 11 million people speak Portuguese'.\r\n\r\n */\r\n\r\n\r\nfunction splitInTwoPopulation (population) {\r\n    let populationInTwo=  population / 2;\r\n    console.log ('In each half live: ' + populationInTwo);\r\n    return populationInTwo;\r\n}\r\n\r\nlet populationInTwo = splitInTwoPopulation(population);\r\n\r\npopulation=population+1;\r\nconsole.log(population);\r\n\r\nlet populationFIN=6;\r\nfunction isItMore (population, populationFIN) {\r\n    let isOrNot=population >= populationFIN;\r\n    console.log('Is living more people in your country than in Finland?: ' + isOrNot)\r\n    return isOrNot;\r\n}\r\nlet isOrNot=isItMore(population, populationFIN);\r\n\r\nlet populationAVG = 33;\r\nfunction isItMoreAvg (population, populationAVG) {\r\n    let isOrNotAvg=population >= populationAVG;\r\n    console.log('Is living more people in your country than in average country?: ' + isOrNotAvg)\r\n    return isOrNotAvg;\r\n}\r\nlet isOrNotAvg=isItMoreAvg(population, populationAVG);\r\n\r\nconst countryP = ('Portugal');\r\nconst languageP = ('portuguese');\r\nconsole.log(countryP + '  is in ' + continent + ' and it is '  + population + ' million people speak ' + languageP + '.');\r\n
+===================================================================
+diff --git a/new_folder/challange.js b/new_folder/challange.js
+--- a/new_folder/challange.js	
++++ b/new_folder/challange.js	
+@@ -91,3 +91,33 @@
+ const countryP = ('Portugal');
+ const languageP = ('portuguese');
+ console.log(countryP + '  is in ' + continent + ' and it is '  + population + ' million people speak ' + languageP + '.');
++
++/* aking Decisions: if / else Statements
++    If your country's population is greater than 33 million, log a string like this to the console: "Portugal's population is 22 million below average" (the 22 is the average of 33 minus the country's population).
++After checking the result, change the population temporarily to 13 and then to 130. See the different results, and set the population back to original.
++*/
++
++if (populationFIN < 33)
++{console.log(`Czech republic population is ${populationAVG-population}  million bellow average.`);
++}
++else
++{console.log(`Czech republic population is ${populationAVG-population} million above average.`);
++}
++
++/* Predict the result of these 5 operations without executing them:
++    console.log('9' - '5'); // -> ? 4
++console.log('19' - '13' + '17'); // -> ? 11
++console.log('19' - '13' + 17); // -> ? 11
++console.log('123' < 57); // -> ?  - false
++console.log(5 + 6 + '4' + 9 - 4 - 2); // -> ? 18
++Execute the operations to check if you were right.
++ NECHAPU
++ */
++
++ console.log('9' - '5');
++console.log('19' - '13' + '17');
++console.log('19' - '13' + 17);
++console.log('123' < 57);
++console.log(5 + 6 + '4' + 9 - 4 - 2);
++
++

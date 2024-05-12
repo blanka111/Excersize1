@@ -1,0 +1,60 @@
+Index: grade_analyzer.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\n\r\n/* Objective: The objective of this assignment is to create a JavaScript program that analyzes a list of student grades and provides various statistics using conditions and loops.\r\nTask Description: You are given an array of student grades (each grade is a number between 0 and 100). Your task is to create a JavaScript program that performs the following tasks:\r\nCalculate the average grade of all the students.\r\nDetermine the highest and lowest grades in the array.\r\nCount how many students passed (grades >= 60) and how many failed (grades < 60).\r\nIdentify the number of students in each grade range: 0-59, 60-69, 70-79, 80-89, 90-100.\r\nInstructions:\r\nCreate a JavaScript file named grade_analyzer.js.\r\nDefine an array named grades containing a list of integers representing student grades.\r\nImplement functions to perform the tasks described above. You can define separate functions for each task or combine them as per your preference.\r\nUse loops to iterate over the array and conditions to perform the necessary calculations.\r\nEnsure your program provides clear and informative output, including the calculated statistics and any relevant messages.\r\nTest your program with different sets of grades to ensure it works correctly under various conditions.\r\nAdd comments to your code to explain the purpose of each function and any complex logic.\r\nExample Output:\r\nGrade Data: [85, 72, 56, 90, 65, 78, 45, 88, 92, 70]\r\nAverage Grade: 73.3\r\nHighest Grade:92\r\nLowest Grade: 45\r\nNumber of Passing Grades: 7\r\nNumber of Failing Grades: 3\r\nNumber of Students with Grades:\r\n0-59: 1\r\n60-69: 2\r\n70-79: 2\r\n80-89: 3\r\n90-100: 2\r\n*/\r\n\r\n/*let grades2 = [85, 72, 56, 90, 65, 78, 45, 88, 92, 70];*/\r\nconst prompt=require ('prompt-sync')();\r\nlet i=0\r\nlet grades =[];\r\n\r\n/*for (i=0;i<3;i++){\r\n    let value=prompt (`Vlozte znamku :`);\r\n    grades.push(parseInt(value));\r\n\r\n}; */\r\n\r\nlet end=true; //zacatek//\r\nwhile (end) {\r\n    let value = prompt(`Vlozte znamku, pokud chces skoncit vloz 999 :`);\r\n    if (value == 999)\r\n    {\r\n        end = false;\r\n    }\r\n    else\r\n    {\r\n        grades.push(parseInt(value));\r\n    }\r\n};\r\n\r\nfunction sum(nums) {\r\n    let sum = 0;\r\n    nums.forEach((el) => {\r\n        sum = sum + el;\r\n    });\r\n\r\n    return sum;     //ukladam si hodnotu //\r\n};\r\n\r\nfunction avg(sum, length) {\r\n    if (grades.length > 0){\r\n        return sum / length;\r\n    }\r\n    else{\r\n        return 0;\r\n    }\r\n};\r\n\r\nlet gradeSummary=sum(grades);\r\nif (grades.length > 0) {\r\n        let gradeSummary=sum(grades);\r\n        }\r\n\r\n\r\nfunction min(nums) {\r\n    let min = nums[0];\r\n    nums.forEach((el) => {\r\n        el < min ? min = el : {};\r\n    });\r\n    if (grades.length === 0) {\r\n        return 0;\r\n    }\r\n    return min;\r\n}\r\n\r\nfunction max(nums) {\r\n    let max = nums[0];\r\n    nums.forEach((el) => {\r\n        el > max ? max = el : {};\r\n    });\r\n    if (grades.length === 0) {\r\n        return 0;\r\n    }\r\n    return max;\r\n}\r\n\r\nfunction passingGrade(nums) {\r\n    let numPassed = 0;\r\n    nums.forEach((el) => {\r\n        el >= 60 ? numPassed++ : {}\r\n    });\r\n    return numPassed;\r\n};\r\n\r\nfunction failingGrade(nums) {\r\n    let numFailed = 0;\r\n    nums.forEach((el) => {\r\n        el < 60 ? numFailed++ : {}\r\n    });\r\n    return numFailed;\r\n};\r\n\r\n\r\nfunction grade1(nums) {\r\n    let grade1 = 0;\r\n    nums.forEach((el) => {\r\n        el <= 59 ? grade1++ : {}\r\n    });\r\n    return grade1;\r\n};\r\n\r\nfunction grade2(nums) {\r\n    let grade2 = 0;\r\n    nums.forEach((el) => {\r\n        ((el > 59) && (el <=69)) ? grade2++ : {}\r\n    });\r\n    return grade2;\r\n};\r\n\r\nfunction grade3(nums) {\r\n    let grade3 = 0;\r\n    nums.forEach((el) => {\r\n        ((el > 69) && (el <=79)) ? grade3++ : {}\r\n    });\r\n    return grade3;\r\n};\r\nfunction grade4(nums) {\r\n    let grade4 = 0;\r\n    nums.forEach((el) => {\r\n        ((el > 79) && (el <=89)) ? grade4++ : {}\r\n    });\r\n    return grade4;\r\n};\r\n\r\nfunction grade5(nums) {\r\n    let grade5 = 0;\r\n    nums.forEach((el) => {\r\n        el > 89 ? grade5++ : {}\r\n    });\r\n    return grade5;\r\n};\r\n\r\n\r\nconsole.log (`Prumer znamek  je :  ${avg(gradeSummary, grades.length)}`);\r\nconsole.log (`Nejlepsi znamka  je :  ${max(grades)}`);\r\nconsole.log (`Nejhorsi znamka  je :  ${min(grades)}`);\r\nconsole.log (`Pocet postupujicich je :  ${passingGrade(grades)}`);\r\nconsole.log (`Pocet nepostupujicich je :  ${failingGrade(grades)}`);\r\nconsole.log (`Pocet znamek v rozmezi 0-59 :  ${grade1(grades)}`);\r\nconsole.log (`Pocet znamek v rozmezi 60-69 :  ${grade2(grades)}`);\r\nconsole.log (`Pocet znamek v rozmezi 70-79 :  ${grade3(grades)}`);\r\nconsole.log (`Pocet znamek v rozmezi 80-89 :  ${grade4(grades)}`);\r\nconsole.log (`Pocet znamek v rozmezi 90-100 :  ${grade5(grades)}`);
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/grade_analyzer.js b/grade_analyzer.js
+--- a/grade_analyzer.js	(revision dd1ec63c2c8a0e8b5733d8881e7707c8cc355d9b)
++++ b/grade_analyzer.js	(date 1714923912322)
+@@ -30,7 +30,7 @@
+ */
+ 
+ /*let grades2 = [85, 72, 56, 90, 65, 78, 45, 88, 92, 70];*/
+-const prompt=require ('prompt-sync')();
++const prompt = require('prompt-sync')();
+ let i=0
+ let grades =[];
+ 
+@@ -43,23 +43,15 @@
+ let end=true; //zacatek//
+ while (end) {
+     let value = prompt(`Vlozte znamku, pokud chces skoncit vloz 999 :`);
+-    if (value == 999)
+-    {
+-        end = false;
+-    }
+-    else
+-    {
+-        grades.push(parseInt(value));
+-    }
+-};
++    value == 999 ? end=false : grades.push(parseInt(value)) ;
++}
+ 
+ function sum(nums) {
+     let sum = 0;
+     nums.forEach((el) => {
+         sum = sum + el;
+     });
+-
+-    return sum;     //ukladam si hodnotu //
++ return sum;    //ukladam si hodnotu //
+ };
+ 
+ function avg(sum, length) {
+@@ -71,11 +63,11 @@
+     }
+ };
+ 
+-let gradeSummary=sum(grades);
++/*let gradeSummary=sum(grades);
+ if (grades.length > 0) {
+         let gradeSummary=sum(grades);
+         }
+-
++*/
+ 
+ function min(nums) {
+     let min = nums[0];
